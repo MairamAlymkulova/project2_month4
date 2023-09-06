@@ -176,7 +176,7 @@ class ProductDetailsViewController: UIViewController {
         buyBtn.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            buyBtn.topAnchor.constraint(equalTo: detailsTitle.bottomAnchor, constant: 20),
+            buyBtn.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
             buyBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             buyBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
@@ -247,7 +247,6 @@ class ProductDetailsViewController: UIViewController {
         productImg.image = UIImage(named: product.image)
         productNameLBL.text = product.name
         price.text = product.price
-        product.feature
         for  feature in product.feature{
             detailsText.text! += "\(feature)\n\n"
         }
